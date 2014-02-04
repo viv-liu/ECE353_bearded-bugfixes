@@ -1,0 +1,4 @@
+Cd into folder
+type: make
+then type ./ece353sh
+now into the sh
