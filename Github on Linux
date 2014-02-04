@@ -1,0 +1,44 @@
+Github on Linux
+
+1) Set up SSH Key: https://help.github.com/articles/generating-ssh-keys
+	cd ~/.ssh
+	ls
+	ssh-keygen -t rsa -C "your_email@example.com"
+	ENTER
+	Type Passphrase
+
+	(Enable Hidden files in View)
+	Go to Places/.ssh/id_rsa.pub (or whatever name we gave the ssh key.pub)
+	COPY the public key.
+
+	Go to browser Github/Account Settings/SSH Keys, Add SSH Key
+	Give it a name for the machine, PASTE the public key.
+
+	// Test it out
+	ssh -T git@github.com
+	Enter the Passphrase
+
+	"Hi user! You've successfully..."
+
+2) Navigate to desired Git local repo.
+	git init
+	git config --global user.name "Vivian Liu"
+	git config --global user.email "mygithubemail@example.com"
+
+	git remote add origin git://github.com/my_username/my_repo.git
+	git remote set-url origin git@github.com:my_username/my_repo.git  
+	// or edit the file directly: pico .git/config
+
+	// Check out existing repo
+	git clone git@github.com:the_username/the_repo.git
+
+	// adding and committing
+	git add <filename> // or git add . for adding the contents of an entire directory
+	git commit -m "Message"
+	git push origin master // or git push origin someBranch
+
+http://rogerdudler.github.io/git-guide/
+
+
+
+
